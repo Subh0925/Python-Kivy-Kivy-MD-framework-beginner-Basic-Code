@@ -1,0 +1,18 @@
+from kivy.app import App
+from kivy.uix.button import Button
+from kivy.uix.pagelayout import PageLayout
+
+class mylayoutapp(App):
+    def build(self):
+        
+        layout = PageLayout()
+
+        btn1 = Button(text="subham",size_hint=(None,None),width=100)
+        btn2 = Button(text="singha",size_hint=(None,None),width=100)
+
+        layout.add_widget(btn1)
+        layout.add_widget(btn2)
+
+        return layout
+    
+mylayoutapp().run()    
