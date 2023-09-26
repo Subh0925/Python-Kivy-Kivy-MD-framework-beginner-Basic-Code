@@ -1,0 +1,36 @@
+from kivymd.app import MDApp
+from kivy.lang.builder import Builder
+
+KV = """
+
+
+MDScreen:
+    MDNavigationLayout:
+        MDScreenManager:
+            MDScreen:
+                MDTopAppBar:
+                    title:"App Book"
+                    elivation:4
+                    pos_hint:{"top":1}
+                    left_action_items:[['menu',lambda x:nav_drawer.set_state("open")]]
+        MDNavigationDrawer:
+            id:nav_drawer    
+
+            MDNavigationDrawerMenu:   
+                MDNavigationDrawerHeader:
+                    title:"Subham Singha"
+                    text:"@subh0225"
+                    spacing:"4dp"
+                    padding: 50
+
+                MDNavigationDrawerLabel:
+                    text:"Account"        
+
+"""
+
+class myapp(MDApp):
+    def build(self):
+        bldr = Builder.load_string(KV)
+        return bldr
+    
+myapp().run()    
