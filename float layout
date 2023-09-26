@@ -1,0 +1,15 @@
+from kivy.app import App
+from kivy.uix.button import Button
+from kivy.uix.floatlayout import FloatLayout
+
+class mylayoutapp(App):
+    def build(self):
+        layout = FloatLayout()
+        btn = Button(text="subham",size_hint=(None,None),width=100,
+                     pos_hint={"center_x":0.5,"center_y":0.5})
+
+        layout.add_widget(btn)
+
+        return layout
+    
+mylayoutapp().run()    
