@@ -1,0 +1,32 @@
+from kivymd.app import MDApp
+from kivymd.uix.list import MDList,ThreeLineListItem
+from kivymd.uix.scrollview import MDScrollView
+
+
+class mylistapp(MDApp):
+    def build(self):
+        myscroll = MDScrollView()
+        mylist = MDList()
+        item1 = ThreeLineListItem (text="item1",secondary_text="Price",tertiary_text="see more..")
+        item2 = ThreeLineListItem (text="item2",secondary_text="Price",tertiary_text="see more..")
+        item3 = ThreeLineListItem (text="item3",secondary_text="Price",tertiary_text="see more..")
+        item4 = ThreeLineListItem (text="item4",secondary_text="Price",tertiary_text="see more..")
+        item5 = ThreeLineListItem (text="item5",secondary_text="Price",tertiary_text="see more..")
+        item6 = ThreeLineListItem (text="item6",secondary_text="Price",tertiary_text="see more..")
+        item7 = ThreeLineListItem (text="item7",secondary_text="Price",tertiary_text="see more..")
+        item8 = ThreeLineListItem (text="item8",secondary_text="Price",tertiary_text="see more..")
+        
+        myscroll.add_widget(mylist)
+        mylist.add_widget(item1)
+        mylist.add_widget(item2)
+        mylist.add_widget(item3)
+        mylist.add_widget(item4)
+        mylist.add_widget(item5)
+        mylist.add_widget(item6)
+        mylist.add_widget(item7)
+        mylist.add_widget(item8)
+
+        return myscroll
+    
+
+mylistapp().run()
