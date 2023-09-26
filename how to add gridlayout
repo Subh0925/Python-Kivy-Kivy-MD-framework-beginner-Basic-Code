@@ -1,0 +1,20 @@
+from kivy.app import App
+from kivy.uix.button import Button
+from kivy.uix.gridlayout import GridLayout
+
+class mygridlayoutapp(App):
+    def build(self):
+        layout = GridLayout(rows=2,row_force_default=True,row_default_height=60)
+        btn = Button (text="click me")
+        btn2 = Button (text="click me")
+        btn3 = Button (text="click me")
+        btn4 = Button (text="click me")
+
+        layout.add_widget(btn)
+        layout.add_widget(btn2)
+        layout.add_widget(btn3)
+        layout.add_widget(btn4)
+
+        return layout
+    
+mygridlayoutapp().run()    
