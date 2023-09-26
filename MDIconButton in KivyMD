@@ -1,0 +1,17 @@
+from kivymd.app import MDApp
+from kivymd.uix.button import MDRectangleFlatButton , MDIconButton
+
+
+class mybtn(MDApp):
+    def build(self): 
+
+        #btn = MDRectangleFlatButton(text="Click Here",
+                                    #pos_hint={"center_x":0.5,"center_y":0.5})
+        
+        btn2 = MDIconButton(icon="android",
+                            pos_hint={"center_x":0.5,"center_y":0.5})
+        
+        return btn2
+    
+
+mybtn().run()
