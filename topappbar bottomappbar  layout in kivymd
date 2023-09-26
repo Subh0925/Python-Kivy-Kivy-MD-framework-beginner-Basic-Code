@@ -1,0 +1,32 @@
+from kivymd.app import MDApp
+from kivy.lang import Builder
+
+KV= """
+MDBoxLayout:
+    orientation:"vertical"
+    MDTopAppBar:
+        title:"Insta"
+        left_action_items:[["menu"]]
+        right_action_items:[["home"],["account"]]
+        elevation:3
+  
+    MDBottomAppBar:
+        MDTopAppBar:
+            icon:"music-note"
+            type:"bottom"
+            left_action_items:[["home"]]
+            right_action_items:[["account"]]
+            elevation:3
+  
+    MDLabel:
+        text:"WELCOME"
+        halign:"center"
+
+    
+"""
+
+class InstaApp(MDApp):
+    def build(self):
+        return Builder.load_string(KV)
+    
+InstaApp().run()    
