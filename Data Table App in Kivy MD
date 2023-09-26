@@ -1,0 +1,34 @@
+from kivymd.app import MDApp
+from kivy.metrics import dp 
+from kivymd.uix.datatables import MDDataTable
+from kivymd.uix.anchorlayout import MDAnchorLayout
+
+class mydatatableapp(MDApp):
+    def build(self):
+        return MDAnchorLayout (
+            MDDataTable (
+                size_hint=(0.7,0.6),
+                check=True,
+                use_pagination=True,
+                column_data=[
+                    ("No.",dp(30)),
+                    ("Food List",dp(45)),
+                    ("Price",dp(30))
+                ],
+                row_data=[
+                   ("1","80","COLD COFFEE"),
+                   ("2","450","ITALIAN PIZZA [8 Inch]"),
+                   ("3","120","LASSI"),
+                   ("4","550","MAHARAJA THALI"),
+                   ("5","230","PURE VEG THALI"),
+                   ("6","180","PALAK PANEER [HALF]"),
+                   ("7","40","BUTTER ROTI"),
+                   ("8","70","TANDORI ROTI"),
+                   ("9","190","DAL TADKA"),
+                   ("10","160","VER BURGER"),
+                ]
+
+            )
+            )
+    
+mydatatableapp().run()  
