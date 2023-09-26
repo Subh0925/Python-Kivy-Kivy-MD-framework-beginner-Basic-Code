@@ -1,0 +1,25 @@
+from kivy.app import App
+from kivy.uix.textinput import TextInput
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.button import Button
+
+class mytextinputapp(App):
+    def build(self):
+        layout = BoxLayout(orientation="vertical",padding=200,spacing=20)
+
+        self.email = TextInput(text="enter your email")
+        self.password = TextInput(text="enter your password")
+        self.submit = Button(text="log in",on_press=self.submitbtn)
+
+        layout.add_widget(self.email)
+        layout.add_widget(self.password)
+        layout.add_widget(self.submit)
+
+        return layout
+    
+    def submitbtn(self,obj):
+        print(f"your email is ={self.email.text}")
+        print(f"your password is ={self.password.text}")
+
+    
+mytextinputapp().run()
